@@ -16,7 +16,7 @@ const Mapa = ({ usuarioId }) => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const URL_WEBSOCKET = 'ws://' + process.env.REACT_APP_BACKEND_URL;
+    const URL_WEBSOCKET = 'wss://' + process.env.REACT_APP_BACKEND_URL;
     const websocket = new WebSocket(URL_WEBSOCKET);
 
     websocket.onopen = () => {
